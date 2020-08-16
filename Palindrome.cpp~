@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int main() {
+  string input = "";
+
+  char arrayInput[80];
+  
+  getline(cin, input);
+  
+  while (input.length() > 80) {
+      cout << "Please input something lower than 80 Characters." << endl;
+      getline(cin, input);
+    }
+
+  for (int i = 0; i < input.length(); i++) {
+    cout << input[i] << ", ";
+  }
+  
+  return 0;
+}
